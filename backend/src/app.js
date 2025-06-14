@@ -23,7 +23,7 @@ app.use("/api/v1/users", userRoutes);
 
 const start = async () => {
     app.set("mongo_user")
-    const connectionDb = await mongoose.connect("mongodb://localhost:27017/zoom-clone", {
+    const connectionDb = await mongoose.connect("mongodb+srv://mohitkum1352:15364164@urlshortner.xh4pdly.mongodb.net/", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
