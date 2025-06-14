@@ -88,9 +88,246 @@
   display: flex;
   align-items: center;
 }
+.landingPageWrapper {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background: black;
+  color: white;
+  background-image: radial-gradient(#333 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.navbar {
+  background-color: #000;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #444;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlist p, .navlist div {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.heroSection {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroContent {
+  flex: 1;
+  min-width: 300px;
+}
+
+.heroImage {
+  flex: 1;
+  text-align: center;
+}
+
+.getStartedBtn a {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #FF9839;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.scrollDownBtn {
+  margin-top: 1rem;
+  background: none;
+  color: #FF9839;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.moreContentSection {
+  padding: 4rem 2rem;
+  background: #111;
+  text-align: center;
+}
+
+.imageContainer img {
+  max-width: 300px;
+  margin: 2rem 0;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.featureBox {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 250px;
+}
+
+.footer {
+  background: #000;
+  padding: 2rem;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+.footerLinks a {
+  color: #FF9839;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
 
 .rightPanel > img {
   width: 30vw;
   height: auto;
   border-radius: 20px;
+}
+.scrollDownBtn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #FF9839;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.moreContentSection {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #000;
+  background-image: radial-gradient(#444 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-attachment: scroll; /* 👈 ensures it doesn't move */
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+.moreContentSection img {
+  width: 200px;
+  margin: 20px auto;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+
+
+.features div {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(126, 36, 36);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 300px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerLinks {
+  margin-top: 10px;
+}
+
+.footerLinks a {
+  color: #FF9839;
+  margin: 0 10px;
+  text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+  .landingMainContainer,
+  .heroSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navlist {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .landingMainContainer > div:first-child {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landingMainContainer > div:first-child,
+  .heroContent {
+    font-size: 1.6rem;
+  }
+
+  .landingMainContainer img,
+  .heroImage img {
+    max-height: 40vh;
+    width: 90%;
+  }
+
+  .features div {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navHeader h2 {
+    font-size: 1.4rem;
+  }
+
+  .navlist {
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: center;
+  }
+
+  .landingMainContainer > div:first-child {
+    font-size: 1.2rem;
+  }
+
+  .getStartedBtn a,
+  .scrollDownBtn {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .features div {
+    width: 100%;
+    max-width: none;
+  }
+
+  .footerLinks a {
+    display: block;
+    margin: 5px 0;
+  }
 }
