@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
 .landingPageContainer {
   width: 100vw;
   height: 100vh;
@@ -222,6 +223,129 @@
   width: 200px;
   margin: 20px auto;
 }
+/* Apply a smooth animated gradient background */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NavBar Styling */
+.navBar {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #555;
+}
+
+.navBar h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+/* Meet Container Styling */
+.meetContainer {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+/* Left Panel Enhancements */
+.leftPanel {
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  animation: fadeInLeft 1s ease forwards;
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+@keyframes fadeInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.leftPanel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Right Panel Animations */
+.rightPanel {
+  animation: fadeInRight 1s ease forwards;
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+@keyframes fadeInRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.rightPanel img {
+  width: 350px;
+  max-width: 90vw;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons & TextFields */
+.MuiTextField-root {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.MuiButton-contained {
+  background-color: #FF9839;
+  color: white;
+  font-weight: bold;
+}
+
+.MuiButton-contained:hover {
+  background-color: #e17b0a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .meetContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .leftPanel, .rightPanel {
+    width: 100%;
+  }
+
+  .rightPanel img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 .features {
   display: flex;
